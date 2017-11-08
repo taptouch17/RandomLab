@@ -11,14 +11,14 @@ jewel.load("diamond.png");// image to use (must be stored in "random/bin/data" f
     
     random_device rDev;
     mt19937 rgen(rDev());
-    uniform_int_distribution<float> distribution(0,1200);
-    uniform_int_distribution<float> distribution1(0.970);
+    uniform_int_distribution<> distribution(0,1200);
+    uniform_int_distribution<> distribution1(0.970);
+    
+    
     
     for(auto i = 0u; i < 20; i++){
-    distribution(X);
-        if (i == 10) {
-    distribution1(Y);
-        }
+    X.push_back(distribution(rgen));
+    Y.push_back(distribution1(rgen));
     }
     
 }
